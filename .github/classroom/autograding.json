@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Group Activity &#45; Amazon Scout Unit Tests",
+      "setup": "",
+      "run": "./gradlew groupactivity-amazonscout-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    }
+  ]
+}
