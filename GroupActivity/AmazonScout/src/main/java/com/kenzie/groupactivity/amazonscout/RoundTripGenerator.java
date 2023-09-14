@@ -8,6 +8,9 @@ import java.util.List;
  * the first half of the trip.
  */
 public class RoundTripGenerator {
+    private List outboundSteps;
+    private List turnArround;
+    private List inBound;
     /**
      * Computes a round trip route that starts with the provided Navigations.
      *
