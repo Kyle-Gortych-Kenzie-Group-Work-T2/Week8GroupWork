@@ -25,6 +25,17 @@ public class RoundTripGenerator {
      *         Navigation steps, beginning with a copy of the {@code outboundSteps}
      */
     public List<NavigationStep> generateRoundTrip(List<NavigationStep> outboundSteps) {
-        return Collections.emptyList();
+        List<NavigationStep> roundTrip = new ArrayList<>();
+        //append outbound steps and turn around.
+        roundTrip.addAll(outboundSteps);
+
+        roundTrip.addAll(NavigationStep.turnAround());
+
+        List<NavigationStep> reversedSteps = NavigationStep.reversedSteps(outboundSteps);
+        for(NavigationStep navigationStep : reversedSteps) {
+            //add this to roundtrip steps list
+            roundTrip.add(NavigationStep.reverseNavigationStep(navigationStep));
+        }
+        return roundTrip;
     }
 }
